@@ -1,6 +1,7 @@
+// MIT License
 import React from 'react';
-import banner from './banner.gif';
-import './App.css';
+import banner from '../banner.gif';
+import './index.css';
 import { Dropdown, Menu, Grid, Card } from 'semantic-ui-react'
 
 const options = [
@@ -9,8 +10,8 @@ const options = [
   { key: 3, text: 'Choice 3', value: 3 },
 ]
 
-class App extends React.Component {
-  
+class Contact extends React.Component {
+
   render() {
     return (
       <div className="App">
@@ -60,4 +61,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default Contact;
