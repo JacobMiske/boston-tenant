@@ -2,13 +2,8 @@
 import React from 'react';
 import banner from '../banner.gif';
 import './index.css';
-import { Dropdown, Menu, Grid, Card } from 'semantic-ui-react'
-
-const options = [
-  { key: 1, text: 'Choice 1', value: 1 },
-  { key: 2, text: 'Choice 2', value: 2 },
-  { key: 3, text: 'Choice 3', value: 3 },
-]
+import Sidebar from "../components/Sidebar";
+import { Header, Container, Divider, Menu, Grid, Card } from 'semantic-ui-react'
 
 class Contact extends React.Component {
 
@@ -23,13 +18,32 @@ class Contact extends React.Component {
           <Grid.Row columns={3}>
             <Grid.Column>
               <Menu compact>
-                <Dropdown text='Home' options={options} simple item />
+                <Sidebar/>
               </Menu>
             </Grid.Column>
             <Grid.Column>
-              <p>
-                Hello
-              </p>
+              <Container textAlign='left' text>
+                <Header as='h2'>Contact Us</Header>
+                <p>
+                  Boston Tenants Coalition
+                </p>
+                <p>
+                  11 Beacon Street, Suite 510
+                </p>
+                <p>
+                  Boston, MA 02108
+                </p>
+                <Divider/>
+                <p> Call at: </p>
+                <p>
+                  617-423-8609
+                </p>
+                <Divider/>
+                <p> Email at: </p>
+                <p>
+                  <a href="mailto:kathy@bostontenant.org">kathy@bostontenant.org</a>
+                </p>
+              </Container>
             </Grid.Column>
             <Grid.Column>
               <Card

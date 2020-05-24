@@ -1,13 +1,12 @@
 import React from 'react';
 import banner from './banner.gif';
 import './App.css';
-import { Dropdown, Menu, Grid, Card } from 'semantic-ui-react'
-
-const options = [
-  { key: 1, text: 'Choice 1', value: 1 },
-  { key: 2, text: 'Choice 2', value: 2 },
-  { key: 3, text: 'Choice 3', value: 3 },
-]
+import Welcome from "./components/Welcome";
+import Example from "./components/Example";
+import Sidebar from "./components/Sidebar";
+import Footer from "./components/Footer";
+import { Grid, Card } from 'semantic-ui-react';
+import { Switch, Route } from 'react-router-dom';
 
 class App extends React.Component {
   
@@ -18,16 +17,18 @@ class App extends React.Component {
         <a href="/">
           <img src={banner} alt="banner"/>
         </a>
+        <Switch>
+          <Route path="/" exact component={Example}/>
+          <Route path="/contact" component={Welcome}/>
+        </Switch>
         <Grid divided='vertically'>
           <Grid.Row columns={3}>
             <Grid.Column>
-              <Menu compact>
-                <Dropdown text='Home' options={options} simple item />
-              </Menu>
+              <Sidebar/>
             </Grid.Column>
             <Grid.Column>
               <p>
-                Hello
+                Other text
               </p>
             </Grid.Column>
             <Grid.Column>
@@ -35,11 +36,11 @@ class App extends React.Component {
                   link
                   header='Immigrant Tenant Support Initiative'
                   meta='ITSI'
-                  description={"To learn more: "}
+                  description={"To learn more: click here"}
               />
               <Card
                 link
-                header='Upcoming Events'
+                header='Upcoming Events (Not actually)'
                 meta=''
                 description={"- 6/1 10PM COVID-19 Rent Information Video Call"}
               />
@@ -47,14 +48,12 @@ class App extends React.Component {
                 link
                 header='Please Donate to Fight for Affordable Housing!'
                 meta='(PayPal)'
-                description={"Click here to donate"}
+                description={"Click here to donate and support us"}
               />
             </Grid.Column>
           </Grid.Row>
         </Grid>
-        <div className="Footer">
-          Copyright 2020 Boston Tenant Coalition
-        </div>
+        <Footer/>
       </div>
     );
   }
