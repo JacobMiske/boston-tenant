@@ -14,6 +14,7 @@ class Contact extends React.Component {
         <a href="/">
           <img src={banner} alt="banner"/>
         </a>
+        <Divider/>
         <Grid divided='vertically'>
           <Grid.Row columns={3}>
             <Grid.Column>

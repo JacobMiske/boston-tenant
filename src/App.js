@@ -27,9 +27,7 @@ class App extends React.Component {
               <Sidebar/>
             </Grid.Column>
             <Grid.Column>
-              <p>
-                Other text
-              </p>
+              <Welcome/>
             </Grid.Column>
             <Grid.Column>
               <Card
