@@ -1,15 +1,9 @@
 // MIT License
 import React from 'react';
-import banner from '../banner.gif';
-import './index.css';
+import banner from '../assets/banner.gif';
+import '../index.css';
 import Sidebar from "./components/Sidebar";
-import { Dropdown, Menu, Grid, Card } from 'semantic-ui-react'
-
-const options = [
-  { key: 1, text: 'Choice 1', value: 1 },
-  { key: 2, text: 'Choice 2', value: 2 },
-  { key: 3, text: 'Choice 3', value: 3 },
-]
+import { Menu, Grid, Card } from 'semantic-ui-react'
 
 class Home extends React.Component {
 

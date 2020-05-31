@@ -113,7 +113,7 @@ function Sidebar() {
         </Menu.Item>
 
         <Menu.Item>
-          <a href="/contact">
+          <a href="/contact-us">
             Contact Us
           </a>
         </Menu.Item>

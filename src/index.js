@@ -1,20 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Route, BrowserRouter as Router, Switch } from 'react-router-dom'
 import './index.css';
 import App from './App';
-import Contact from "./containers/Contact";
 import * as serviceWorker from './serviceWorker';
 
 const routing = (
-  <Router>
-    <Switch>
-      <React.StrictMode>
-        <Route exact path="/" component={App} />
-        <Route path="/contact" component={Contact} />
-      </React.StrictMode>
-    </Switch>
-  </Router>
+    <React.StrictMode>
+      <App/>
+    </React.StrictMode>
 );
 
 ReactDOM.render(routing, document.getElementById('root'));

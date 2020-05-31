@@ -1,12 +1,13 @@
 import React from 'react';
-import banner from './banner.gif';
+import banner from './assets/banner.gif';
 import './App.css';
 import Welcome from "./components/Welcome";
-import Example from "./components/Example";
+import About from "./components/About";
+import Contact from "./components/Contact";
 import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
-import { Grid, Card } from 'semantic-ui-react';
-import { Switch, Route } from 'react-router-dom';
+import { Grid, Card, Divider } from 'semantic-ui-react';
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom'
 
 class App extends React.Component {
   
@@ -14,22 +15,28 @@ class App extends React.Component {
     return (
       <div className="App">
         <div className="Header"/>
+
         <a href="/">
           <img src={banner} alt="banner"/>
         </a>
-        <Switch>
-          <Route path="/" exact component={Example}/>
-          <Route path="/contact" component={Welcome}/>
-        </Switch>
-        <Grid divided='vertically'>
+
+        <Divider/>
+
+        <Grid divided='centered vertically'>
           <Grid.Row columns={3}>
-            <Grid.Column>
+            <Grid.Column width={3}>
               <Sidebar/>
             </Grid.Column>
-            <Grid.Column>
-              <Welcome/>
+            <Grid.Column width={7}>
+              <Router>
+                <Switch>
+                  <Route path="/" exact component={Welcome}/>
+                  <Route path="/about" component={About}/>
+                  <Route path="/contact-us" component={Contact}/>
+                </Switch>
+              </Router>
             </Grid.Column>
-            <Grid.Column>
+            <Grid.Column width={3}>
               <Card
                   link
                   header='Immigrant Tenant Support Initiative'
