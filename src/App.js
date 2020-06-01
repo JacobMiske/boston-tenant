@@ -3,6 +3,9 @@ import banner from './assets/banner.gif';
 import './App.css';
 import Welcome from "./components/Welcome";
 import About from "./components/About";
+import History from "./components/History";
+import Staff from "./components/Staff";
+import MemberOrgs from "./components/MemberOrgs";
 import Contact from "./components/Contact";
 import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
@@ -32,6 +35,9 @@ class App extends React.Component {
                 <Switch>
                   <Route path="/" exact component={Welcome}/>
                   <Route path="/about" component={About}/>
+                  <Route path="/history" component={History}/>
+                  <Route path="/staff" component={Staff}/>
+                  <Route path="/memberorgs" component={MemberOrgs}/>
                   <Route path="/contact-us" component={Contact}/>
                 </Switch>
               </Router>

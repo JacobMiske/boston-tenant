@@ -16,26 +16,28 @@ function Sidebar() {
         <Menu.Item>
           <Dropdown text='About' pointing>
             <Dropdown.Menu>
+              
               <Dropdown.Item>
                 <a href="/about">
                   About BTC
                 </a>
               </Dropdown.Item>
               <Dropdown.Item>
-                <a href="/about/history">
+                <a href="/history">
                   History
                 </a>
               </Dropdown.Item>
               <Dropdown.Item>
-                <a href="/about/staff">
+                <a href="/staff">
                   Staff
                 </a>
               </Dropdown.Item>
               <Dropdown.Item>
-                <a href="/about/memberorgs">
+                <a href="/memberorgs">
                   Member Organizations
                 </a>
               </Dropdown.Item>
+
             </Dropdown.Menu>
           </Dropdown>
         </Menu.Item>
@@ -49,6 +51,7 @@ function Sidebar() {
         <Menu.Item>
           <Dropdown text='News and Events' pointing>
             <Dropdown.Menu>
+
               <Dropdown.Item>
                 <a href="/about">
                   About BTC
@@ -64,11 +67,7 @@ function Sidebar() {
                   Staff
                 </a>
               </Dropdown.Item>
-              <Dropdown.Item>
-                <a href="/about/memberorgs">
-                  Member Organizations
-                </a>
-              </Dropdown.Item>
+
             </Dropdown.Menu>
           </Dropdown>
         </Menu.Item>
